@@ -9,7 +9,7 @@ const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTas
     const hendeleClick = (ticket) => {
         setIsSelected(!isSelected);
         setStatusCount(statusCount + 1);
-        toast.success('🦄 Wow so easy! Ticket Successfully Added', {
+        toast.warn('🦄Ticket Successfully In Progress', {
             position: "top-center",
             autoClose: 1500,
             hideProgressBar: false,
@@ -17,7 +17,7 @@ const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTas
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "colored",
+            theme: "dark",
             transition: Bounce,
         })
         setTaskStatus([...taskStatus, ticket])

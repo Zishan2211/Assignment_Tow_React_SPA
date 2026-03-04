@@ -5,8 +5,7 @@ const TaskStatus = ({ task, hendelConfrim }) => {
 
     const hendelResolve = () => {
         hendelConfrim(task);
-
-        toast.warn('Task Completed Successfully', {
+        toast.success('Task Completed Successfully ', {
             position: "top-center",
             autoClose: 1500,
             hideProgressBar: false,
@@ -14,7 +13,7 @@ const TaskStatus = ({ task, hendelConfrim }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "colored",
             transition: Bounce,
         })
     }
