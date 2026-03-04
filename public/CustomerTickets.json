@@ -23,7 +23,7 @@
     "description": "The 'New Ticket' button overlaps the sidebar on mobile devices. Need to adjust z-index and media queries for small screens.",
     "customer": "Rakib Hasan",
     "priority": "Low PRIORITY",
-    "status": "Resolved",
+    "status": "In Progress",
     "createdAt": "2026-03-02"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Checkout page shows Dollar instead of Taka for local users. Need to fix localization logic based on user region.",
     "customer": "Sumaiya Khan",
     "priority": "Low PRIORITY",
-    "status": "Resolved",
+    "status": "In Progress",
     "createdAt": "2026-03-03"
   },
   {
@@ -95,7 +95,7 @@
     "description": "Uploads failing for files over 500KB. Need to increase server limit and add frontend validation for file size.",
     "customer": "Kamrul Islam",
     "priority": "Low PRIORITY",
-    "status": "Resolved",
+    "status": "Open",
     "createdAt": "2026-03-04"
   },
   {
@@ -110,7 +110,7 @@
   {
     "id": 1013,
     "title": "Search Filter Bug",
-    "description": "Filtering by 'Resolved' status returns zero results. Need to debug backend API query parameters and filter logic.",
+    "description": "Filtering by 'Open' status returns zero results. Need to debug backend API query parameters and filter logic.",
     "customer": "Liza Rahman",
     "priority": "Medium PRIORITY",
     "status": "In Progress",

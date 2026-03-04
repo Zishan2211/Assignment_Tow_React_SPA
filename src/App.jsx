@@ -4,7 +4,7 @@ import Banner from './Components/Banner/Banner'
 import Customer from './Components/Customer/Customer'
 import Footer from './Components/Footer/Footer'
 import Navbar from './Components/NavBar/Navbar'
-import SelectedCard from './Components/SelectedCard/SelectedCard'
+import SelectedTicket from './Components/SelectedTicket/SelectedTicket'
 
 
 const fetchCustomerTickets = async () => {
@@ -26,7 +26,7 @@ function App() {
       </div>}>
         <div className="flex flex-col lg:flex-row gap-5 max-w-300 mx-auto bg-[#F3F4F6] p-4 md:pt-25">
           <Customer CustomerTickets={CustomerTickets}></Customer>
-          <SelectedCard></SelectedCard>
+          <SelectedTicket></SelectedTicket>
         </div>
       </Suspense>
 
