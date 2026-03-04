@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Bounce, toast } from 'react-toastify';
+import dateLogo from "../../assets/DateLogo.png"
 
 const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTaskStatus }) => {
 
@@ -8,15 +9,15 @@ const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTas
     const hendeleClick = (ticket) => {
         setIsSelected(!isSelected);
         setStatusCount(statusCount + 1);
-        toast.success('🦄 Wow so easy!', {
+        toast.success('🦄 Wow so easy! Ticket Successfully Added', {
             position: "top-center",
-            autoClose: 5000,
+            autoClose: 1500,
             hideProgressBar: false,
             closeOnClick: false,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "colored",
             transition: Bounce,
         })
         setTaskStatus([...taskStatus, ticket])
@@ -49,7 +50,7 @@ const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTas
                     <div className="flex items-center gap-4 text-[#4B5563]">
                         <span className="text-sm font-semibold">{ticket.assignedTo}</span>
                         <span className="text-sm flex items-center gap-1">
-                            <span> 📅 </span> {ticket.createdAt}
+                            <span> <img className='w-4 h-4' src={dateLogo} alt="" /> </span> {ticket.createdAt}
                         </span>
                     </div>
                 </div>

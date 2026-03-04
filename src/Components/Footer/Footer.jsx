@@ -1,4 +1,8 @@
 import React from 'react';
+import facebook from "../../assets/Facebook.png"
+import twitter from "../../assets/xLogo.png"
+import instagram from "../../assets/instagram.png"
+import support from "../../assets/support.png"
 
 const Footer = () => {
     return (
@@ -26,12 +30,12 @@ const Footer = () => {
                     <a className="link link-hover">Terms & Conditions</a>
                     <a className="link link-hover">Join Us</a>
                 </nav>
-                <nav className="flex flex-col gap-2">
+                <nav className="flex flex-col gap-2 ">
                     <h6 className="footer-title">Social Links</h6>
-                    <a className="link link-hover"><span>@</span> CS — Ticket System</a>
-                    <a className="link link-hover"><span>@</span> CS — Ticket System</a>
-                    <a className="link link-hover"><span>@</span> CS — Ticket System</a>
-                    <a className="link link-hover"><span>@</span>   support@cst.com</a>
+                    <a className="link link-hover flex gap-2"><img className='w-5 h-4' src={facebook} alt="" /> CS — Ticket System</a>
+                    <a className="link link-hover flex gap-2"><img className='w-5 h-4' src={twitter} alt="" /> CS — Ticket System</a>
+                    <a className="link link-hover flex gap-2"><img className='w-5 h-4' src={instagram} alt="" /> CS — Ticket System</a>
+                    <a className="link link-hover flex gap-2"><img className='w-5 h-4' src={support} alt="" /> support@cst.com</a>
                 </nav>
             </footer>
             <hr className="border-t border-gray-300" />
