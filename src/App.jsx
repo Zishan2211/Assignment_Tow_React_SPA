@@ -30,7 +30,7 @@ function App() {
       <Suspense fallback={<div className="flex justify-center items-center min-h-[50vh] w-full">
         <span className="loading loading-bars loading-xl"></span>
       </div>}>
-        <div className="flex flex-col lg:flex-row gap-5 max-w-300 mx-auto bg-[#F3F4F6] p-4 md:pt-25">
+        <div className="flex flex-col lg:flex-row rounded-t-3xl gap-5 max-w-300 mx-auto bg-[#F3F4F6] p-4 md:pt-14 md:pb-14">
           <Customer
             taskStatus={taskStatus}
             setTaskStatus={setTaskStatus}

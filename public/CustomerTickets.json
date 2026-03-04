@@ -10,7 +10,7 @@
   },
   {
     "id": 1002,
-    "title": "Payment Gateway Timeout",
+    "title": "Payment Gateway",
     "description": "SSLCommerz page is timing out during checkout. High PRIORITY cart abandonment reported. Technical team needs to optimize the gateway integration.",
     "customer": "Nusrat Jahan",
     "priority": "Critical",
@@ -64,8 +64,8 @@
   },
   {
     "id": 1008,
-    "title": "Wrong Currency Symbol",
-    "description": "Checkout page shows Dollar instead of Taka for local users. Need to fix localization logic based on user region.",
+    "title": "Wrong Currency",
+    "description": "Checkout page shows Dollar instead of Taka for local users. Need to fix localization logic based on user region localization logic.",
     "customer": "Sumaiya Khan",
     "priority": "Low PRIORITY",
     "status": "In Progress",
