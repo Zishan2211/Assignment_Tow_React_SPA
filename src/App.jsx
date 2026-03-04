@@ -5,6 +5,7 @@ import Customer from './Components/Customer/Customer'
 import Footer from './Components/Footer/Footer'
 import Navbar from './Components/NavBar/Navbar'
 import SelectedTicket from './Components/SelectedTicket/SelectedTicket'
+import { Bounce, ToastContainer } from 'react-toastify'
 
 
 const fetchCustomerTickets = async () => {
@@ -18,7 +19,7 @@ function App() {
   const [statusCount, setStatusCount] = useState(0);
   const [taskStatus, setTaskStatus] = useState([]);
 
-  
+
 
 
   return (
@@ -42,6 +43,17 @@ function App() {
       </Suspense>
 
       <Footer></Footer>
+      <ToastContainer position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce} />
     </>
   )
 }

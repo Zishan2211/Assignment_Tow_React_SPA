@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Bounce, toast } from 'react-toastify';
 
 const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTaskStatus }) => {
 
@@ -7,7 +8,17 @@ const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTas
     const hendeleClick = (ticket) => {
         setIsSelected(!isSelected);
         setStatusCount(statusCount + 1);
-
+        toast.success('🦄 Wow so easy!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        })
         setTaskStatus([...taskStatus, ticket])
     }
 

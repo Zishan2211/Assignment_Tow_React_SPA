@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TaskStatus = ({ task }) => {
-    console.log(task)
+    
     return (
         <div>
             <div className="w-full max-w-sm bg-white rounded-xl mt-5 shadow-sm border border-gray-100 p-4 md:p-5">
