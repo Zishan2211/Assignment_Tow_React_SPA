@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Banner.css"
 
-const Banner = () => {
+const Banner = ({ statusCount }) => {
     return (
         <div className='max-w-300 mx-auto'>
             <div className="container">
@@ -9,7 +9,7 @@ const Banner = () => {
                     <div className="pattern-overlayy"></div>
                     <div className="content">
                         <p>In-Progress</p>
-                        <h1>0</h1>
+                        <h1>{statusCount}</h1>
                     </div>
                 </div>
 

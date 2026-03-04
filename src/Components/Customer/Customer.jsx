@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import Ticket from '../Ticket/Ticket';
 
-const Customer = ({ CustomerTickets }) => {
+const Customer = ({ CustomerTickets, statusCount, setStatusCount }) => {
 
     const ticketsData = use(CustomerTickets);
     console.log(ticketsData);
@@ -13,7 +13,7 @@ const Customer = ({ CustomerTickets }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                 {
-                    ticketsData.map((ticket, index) => <Ticket key={index} ticket={ticket} />
+                    ticketsData.map((ticket, index) => <Ticket setStatusCount={setStatusCount} statusCount={statusCount} key={index} ticket={ticket} />
                     )
                 }
 
