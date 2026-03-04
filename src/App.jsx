@@ -18,18 +18,24 @@ const CustomerTickets = fetchCustomerTickets();
 function App() {
   const [statusCount, setStatusCount] = useState(0);
   const [taskStatus, setTaskStatus] = useState([]);
+  const [resolvedCount, setResolvedCount] = useState(0);
 
-
-
+  const hendelConfrim = (payload) => {
+    const filteredTask = taskStatus.filter(task => task.id !== payload.id);
+    setTaskStatus(filteredTask);
+    if (statusCount > 0) {
+      setStatusCount(statusCount - 1);
+    }
+    setResolvedCount(oldTask => oldTask + 1);
+  }
 
   return (
     <>
       <Navbar></Navbar>
-      <Banner statusCount={statusCount}></Banner>
+      <Banner statusCount={statusCount} resolvedCount={resolvedCount}></Banner>
 
-      <Suspense fallback={<div className="flex justify-center items-center min-h-[50vh] w-full">
-        <span className="loading loading-bars loading-xl"></span>
-      </div>}>
+      <Suspense fallback={<div className="flex justify-center items-center min-h-[50vh] w-full"><span className="loading loading-bars loading-xl"></span></div>}>
+
         <div className="flex flex-col lg:flex-row rounded-t-3xl gap-5 max-w-300 mx-auto bg-[#F3F4F6] p-4 md:pt-14 md:pb-14">
           <Customer
             taskStatus={taskStatus}
@@ -38,8 +44,9 @@ function App() {
             setStatusCount={setStatusCount}
             CustomerTickets={CustomerTickets}
           ></Customer>
-          <SelectedTicket taskStatus={taskStatus}></SelectedTicket>
+          <SelectedTicket hendelConfrim={hendelConfrim} taskStatus={taskStatus}></SelectedTicket>
         </div>
+
       </Suspense>
 
       <Footer></Footer>

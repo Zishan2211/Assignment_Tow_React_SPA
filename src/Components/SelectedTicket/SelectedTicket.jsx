@@ -1,7 +1,7 @@
 import React from 'react';
 import TaskStatus from '../TaskStatus/TaskStatus';
 
-const SelectedCard = ({ taskStatus }) => {
+const SelectedCard = ({ taskStatus, hendelConfrim }) => {
     return (
         <div className='flex justify-center items-start'>
 
@@ -9,7 +9,7 @@ const SelectedCard = ({ taskStatus }) => {
                 <h2 className="text-2xl font-bold text-[#374151]">Task Status</h2>
                 <p className="text-sm text-[#9CA3AF] mt-2 font-medium">Select a ticket to add to Task Status</p>
                 {
-                    taskStatus.map((task) => <TaskStatus key={task.id} task={task} />)
+                    taskStatus.map((task) => <TaskStatus hendelConfrim={hendelConfrim} key={task.id} task={task} />)
                 }
 
 
