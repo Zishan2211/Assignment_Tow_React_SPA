@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1001,
+    "title": "Login Authentication Error",
+    "description": "Users are facing 404 errors when logging in via Google. Need to check OAuth redirect settings and API credentials immediately.",
+    "customer": "Ariful Islam",
+    "priority": "High PRIORITY",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 1002,
+    "title": "Payment Gateway Timeout",
+    "description": "SSLCommerz page is timing out during checkout. High PRIORITY cart abandonment reported. Technical team needs to optimize the gateway integration.",
+    "customer": "Nusrat Jahan",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 1003,
+    "title": "UI Alignment Issue",
+    "description": "The 'New Ticket' button overlaps the sidebar on mobile devices. Need to adjust z-index and media queries for small screens.",
+    "customer": "Rakib Hasan",
+    "priority": "Low PRIORITY",
+    "status": "Resolved",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 1004,
+    "title": "Database Connection Leak",
+    "description": "Idle DB connections are causing server crashes every few hours. Need to review the connection pool manager and error handling.",
+    "customer": "Sabbir Ahmed",
+    "priority": "High PRIORITY",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 1005,
+    "title": "Invoice PDF Generation",
+    "description": "Clients requested a feature to download monthly invoices as PDFs. Need to integrate a PDF library and design a template.",
+    "customer": "Farhana Akter",
+    "priority": "Medium PRIORITY",
+    "status": "In Progress",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 1006,
+    "title": "SLow PRIORITY Dashboard Loading",
+    "description": "Admin dashboard is sLow PRIORITY due to heavy SQL queries. Need to implement Redis caching or add database indexes for better performance.",
+    "customer": "Tanvir Rahman",
+    "priority": "Medium PRIORITY",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 1007,
+    "title": "Email Notification Failure",
+    "description": "System failed to send automated emails. SMTP logs show authentication errors. Need to verify API keys and sending limits.",
+    "customer": "Mehedi Hasan",
+    "priority": "High PRIORITY",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 1008,
+    "title": "Wrong Currency Symbol",
+    "description": "Checkout page shows Dollar instead of Taka for local users. Need to fix localization logic based on user region.",
+    "customer": "Sumaiya Khan",
+    "priority": "Low PRIORITY",
+    "status": "Resolved",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 1009,
+    "title": "Dark Mode Toggle Bug",
+    "description": "Switching to dark mode resets form data. Need to fix state management to preserve user input during theme changes.",
+    "customer": "Imtiaz Ahmed",
+    "priority": "Medium PRIORITY",
+    "status": "In Progress",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 1010,
+    "title": "API Rate Limit Exceeded",
+    "description": "Mobile app hitting 60 requests/min limit. Need to optimize background calls and consider increasing limits for authenticated users.",
+    "customer": "Ayesha Siddiqua",
+    "priority": "High PRIORITY",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 1011,
+    "title": "Profile Picture Upload",
+    "description": "Uploads failing for files over 500KB. Need to increase server limit and add frontend validation for file size.",
+    "customer": "Kamrul Islam",
+    "priority": "Low PRIORITY",
+    "status": "Resolved",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 1012,
+    "title": "Password Reset Link",
+    "description": "Reset links expire in 5 minutes instead of 30. Need to investigate server timezone and token expiration logic.",
+    "customer": "Zubair Hossain",
+    "priority": "Medium PRIORITY",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 1013,
+    "title": "Search Filter Bug",
+    "description": "Filtering by 'Resolved' status returns zero results. Need to debug backend API query parameters and filter logic.",
+    "customer": "Liza Rahman",
+    "priority": "Medium PRIORITY",
+    "status": "In Progress",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 1014,
+    "title": "Broken Footer Link",
+    "description": "Privacy Policy link leads to a 404 page. Need to update the URL path in the footer component immediately.",
+    "customer": "Hasan Mahmud",
+    "priority": "Low PRIORITY",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 1015,
+    "title": "Session Timeout Issue",
+    "description": "Active users are logged out after 10 minutes. Need to check JWT and cookie settings to fix premature session termination.",
+    "customer": "Mitu Akter",
+    "priority": "High PRIORITY",
+    "status": "In Progress",
+    "createdAt": "2026-03-04"
+  }
+]
