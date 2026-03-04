@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 
-const Ticket = ({ ticket, index, statusCount, setStatusCount }) => {
+const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTaskStatus }) => {
 
     const [isSelected, setIsSelected] = useState(false);
-    const hendeleClick = () => {
+
+    const hendeleClick = (ticket) => {
         setIsSelected(!isSelected);
         setStatusCount(statusCount + 1);
+
+        setTaskStatus([...taskStatus, ticket])
     }
 
     return (
         <div key={index} >
 
             <button disabled={isSelected} onClick={() => {
-                hendeleClick()
+                hendeleClick(ticket)
             }}
                 className={`bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col ${isSelected === true ? 'ring-6 ring-cyan-900' : ''}`}>
                 <div className="flex justify-between items-start mb-3">

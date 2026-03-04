@@ -15,8 +15,11 @@ const CustomerTickets = fetchCustomerTickets();
 
 
 function App() {
-
   const [statusCount, setStatusCount] = useState(0);
+  const [taskStatus, setTaskStatus] = useState([]);
+
+  
+
 
   return (
     <>
@@ -27,8 +30,14 @@ function App() {
         <span className="loading loading-bars loading-xl"></span>
       </div>}>
         <div className="flex flex-col lg:flex-row gap-5 max-w-300 mx-auto bg-[#F3F4F6] p-4 md:pt-25">
-          <Customer statusCount={statusCount} setStatusCount={setStatusCount} CustomerTickets={CustomerTickets}></Customer>
-          <SelectedTicket></SelectedTicket>
+          <Customer
+            taskStatus={taskStatus}
+            setTaskStatus={setTaskStatus}
+            statusCount={statusCount}
+            setStatusCount={setStatusCount}
+            CustomerTickets={CustomerTickets}
+          ></Customer>
+          <SelectedTicket taskStatus={taskStatus}></SelectedTicket>
         </div>
       </Suspense>
 
