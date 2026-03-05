@@ -19,7 +19,7 @@
   },
   {
     "id": 1003,
-    "title": "UI Alignment Issue",
+    "title": "UI Alignment",
     "description": "The 'New Ticket' button overlaps the sidebar on mobile devices. Need to adjust z-index and media queries for small screens.",
     "customer": "Rakib Hasan",
     "priority": "Low PRIORITY",
@@ -37,7 +37,7 @@
   },
   {
     "id": 1005,
-    "title": "Invoice PDF Generation",
+    "title": "Invoice PDF",
     "description": "Clients requested a feature to download monthly invoices as PDFs. Need to integrate a PDF library and design a template.",
     "customer": "Farhana Akter",
     "priority": "Medium PRIORITY",
@@ -73,7 +73,7 @@
   },
   {
     "id": 1009,
-    "title": "Dark Mode Toggle Bug",
+    "title": "Dark Mode Toggle",
     "description": "Switching to dark mode resets form data. Need to fix state management to preserve user input during theme changes.",
     "customer": "Imtiaz Ahmed",
     "priority": "Medium PRIORITY",
@@ -127,7 +127,7 @@
   },
   {
     "id": 1015,
-    "title": "Session Timeout Issue",
+    "title": "Timeout Issue",
     "description": "Active users are logged out after 10 minutes. Need to check JWT and cookie settings to fix premature session termination.",
     "customer": "Mitu Akter",
     "priority": "High PRIORITY",

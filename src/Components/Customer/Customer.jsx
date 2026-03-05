@@ -4,7 +4,7 @@ import Ticket from '../Ticket/Ticket';
 const Customer = ({ CustomerTickets, statusCount, setStatusCount, taskStatus, setTaskStatus }) => {
 
     const ticketsData = use(CustomerTickets);
-
+    
 
     return (
         < div className="flex-1" >
