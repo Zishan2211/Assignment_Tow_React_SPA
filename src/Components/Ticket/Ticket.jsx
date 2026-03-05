@@ -5,6 +5,11 @@ import dateLogo from "../../assets/DateLogo.png"
 const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTaskStatus }) => {
 
     const [isSelected, setIsSelected] = useState(false);
+    const statusBg = ticket.status === "In Progress" ? "bg-yellow-500 text-white" : "bg-green-400 text-black";
+    const priorityColor =
+        ticket.priority === "High PRIORITY" ? "text-red-600" :
+            ticket.priority === "Medium PRIORITY" ? "text-green-600" :
+                ticket.priority === "Low PRIORITY" ? "text-yellow-600" : "text-gray-500";
 
     const hendeleClick = (ticket) => {
         setIsSelected(!isSelected);
@@ -33,8 +38,9 @@ const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTas
                 <div className="flex justify-between items-start mb-3">
 
                     <h3 className="font-bold text-[#111827] text-xl">{ticket.title}</h3>
-                    <span className="badge bg-[#6EE7B7] text-[#065F46] border-none px-4 py-3 font-medium gap-2">
-                        <span className="w-2 h-2 bg-[#059669] rounded-full"></span> {ticket.status}
+                    <span className={`badge border-none px-4 py-3 font-medium gap-2 ${statusBg}`}>
+                        <span className={`w-2 h-2 rounded-full ${ticket.status === "In Progress" ? 'bg-white' : 'bg-[#059669]'}`}></span>
+                        {ticket.status}
                     </span>
                 </div>
 
@@ -45,7 +51,9 @@ const Ticket = ({ ticket, index, statusCount, setStatusCount, taskStatus, setTas
                 <div className="border-t border-gray-100 pt-4 flex justify-between items-center mt-auto">
                     <div className="flex gap-4 items-center">
                         <span className="text-sm text-[#9CA3AF]">#{ticket.id}</span>
-                        <span className="text-xs font-bold text-[#EF4444] uppercase">{ticket.priority}</span>
+                        <span className={`text-xs font-bold uppercase ${priorityColor}`}>
+                            {ticket.priority}
+                        </span>
                     </div>
                     <div className="flex items-center gap-4 text-[#4B5563]">
                         <span className="text-sm font-semibold">{ticket.assignedTo}</span>
