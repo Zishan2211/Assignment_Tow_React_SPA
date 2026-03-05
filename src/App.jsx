@@ -19,6 +19,7 @@ function App() {
   const [statusCount, setStatusCount] = useState(0);
   const [taskStatus, setTaskStatus] = useState([]);
   const [resolvedCount, setResolvedCount] = useState(0);
+  const [resolvedTasks, setResolvedTasks] = useState([]);
 
   const hendelConfrim = (payload) => {
     const filteredTask = taskStatus.filter(task => task.id !== payload.id);
@@ -27,6 +28,7 @@ function App() {
       setStatusCount(statusCount - 1);
     }
     setResolvedCount(oldTask => oldTask + 1);
+    setResolvedTasks([...resolvedTasks, payload]);
   }
 
   return (
@@ -44,7 +46,11 @@ function App() {
             setStatusCount={setStatusCount}
             CustomerTickets={CustomerTickets}
           ></Customer>
-          <SelectedTicket hendelConfrim={hendelConfrim} taskStatus={taskStatus}></SelectedTicket>
+          <SelectedTicket
+            hendelConfrim={hendelConfrim}
+            taskStatus={taskStatus}
+            resolvedTasks={resolvedTasks}
+          ></SelectedTicket>
         </div>
 
       </Suspense>
